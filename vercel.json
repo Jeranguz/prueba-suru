@@ -2,17 +2,17 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "public/index.php": {
+        "api/index.php": {
             "runtime": "vercel-php@0.7.2"
         }
     },
     "routes": [
         {
-            "src": "/api/(.)",
+            "src": "/api/(.*)",
             "dest": "/api/index.php"
         },
         {
-            "src": "/(.)",
+            "src": "/(.*)",
             "dest": "/index.php"
         }
     ],
@@ -20,7 +20,7 @@
         "APP_ENV": "production",
         "APP_DEBUG": "false",
         "APP_URL": "https://suru_api.com/",
-        "PHP_VERSION": "8.3",
+        "PHP_VERSION": "8.2",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
